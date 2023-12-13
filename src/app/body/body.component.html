@@ -1,0 +1,17 @@
+<div class="body">
+    <div class="title">
+        <span>Hola mundo</span>
+    </div>
+    <div class="body-destacado">
+        <div>
+            <app-new-conecta [news]="viewNews[0].relationships.field_destacados"
+                [subTitle]="'Destacados'"></app-new-conecta>
+        </div>
+        <div>
+            <app-new-conecta [news]="viewNews[0].relationships.field_populares"
+                [subTitle]="'Populares'"></app-new-conecta>
+
+        </div>
+
+    </div>
+</div>
