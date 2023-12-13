@@ -24,27 +24,27 @@ export class BodyComponent implements OnInit {
 
     if (!sessionStorage.getItem('portada')) {
       this.bodyServices.getPortada().subscribe(s => {
-        console.log('portada: ', s);
+        // console.log('portada: ', s);
         this.portada = s;
         this.selectedCatNews()
 
       })
     } else {
       this.portada = JSON.parse(sessionStorage.getItem('portada')!);
-      console.log('portada sesion: ', this.portada);
+      // console.log('portada sesion: ', this.portada);
       this.selectedCatNews()
 
     }
 
   }
   selectedCatNews() {
-    console.log('portada params:', this.params)
+    // console.log('portada params:', this.params)
     if (this.params == undefined) {
       this.viewNews[0] = this.portada[this.portada.length - 1]
     } else {
       this.viewNews = this.portada.filter((f: any) => this.normalizarTexto(f?.attributes?.title) == this.params)
     }
-    console.log('portada news', this.viewNews)
+    // console.log('portada news', this.viewNews)
 
 
   }
@@ -63,7 +63,7 @@ export class BodyComponent implements OnInit {
     // Quitar comas y puntos
     texto = texto.replace(",", "");
     texto = texto.replace(".", "");
-    console.log('portada texto: ', texto)
+    // console.log('portada texto: ', texto)
     return texto;
   }
 

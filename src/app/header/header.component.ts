@@ -12,9 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.menuServices.getMenuCampus().subscribe((campus: any) => {
       this.menuCampus = campus.data;
-      console.log('campus: ', this.menuCampus)
+      // console.log('campus: ', this.menuCampus)
       Object.keys(this.menuCampus).forEach((e: any) => {
-        console.log(this.menuCampus[e].attributes.title + ' - ' + this.menuCampus[e].attributes.path.alias + ' - ' + this.menuCampus[e].id)
+        // console.log(this.menuCampus[e].attributes.title + ' - ' + this.menuCampus[e].attributes.path.alias + ' - ' + this.menuCampus[e].id)
 
       });
 
