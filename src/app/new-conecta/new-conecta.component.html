@@ -3,19 +3,17 @@
     <h2>{{subTitle}}</h2>
 
 
-    <article *ngFor="let news of newsAll" role="article" class="news ">
+    <article *ngFor="let news of newsAll; let i = index" role="article" class="news ">
 
         <div class="grid-category">
-            <a href="/noticias/categoria/121">Institución</a>
+            <a
+                href="/noticias/categoria/{{newsAllCat[i]?.data[0]?.attributes?.drupal_internal__tid}}">{{newsAllCat[i]?.data[0]?.attributes?.name}}</a>
         </div>
         <a
             href="/es/noticias/ciudad-de-mexico/institucion/disenadora-del-ano-2022-crea-la-decima-cuarta-casa-de-sorteos">
             <div class="grid-image">
 
-                <img loading="lazy"
-                    src="https://conecta.tec.mx/sites/default/files/styles/grid/public/2023-12/decima-cuarta-casa-de-autor-de-sorteos-tec-es-disenada-por-disenadora-del-anio-cristina-grappin.jpg?itok=t6H7xJPL"
-                    alt="Decima cuarta casa de autor de Sorteos Tec es creada por Diseñadora del Año Cristina Grappin"
-                    typeof="Image" />
+                <img loading="lazy" src="{{getattd(i)}}" alt="" typeof="Image" />
 
             </div>
         </a>

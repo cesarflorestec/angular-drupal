@@ -8,7 +8,20 @@ import { environment } from 'src/environments/environment.development';
 export class NewcService {
 
   constructor(private api: HttpClient) { }
-  getNewsId(idNews: string) {
-    return this.api.get(environment.newSelected + idNews)
+  getNewsId(idNews: string, type?: string) {
+    switch (type) {
+      case 'img':
+        type = '/' + environment.imgPortada
+        break;
+      case 'cat':
+        type = '/' + environment.catPortada
+        break
+      default:
+        type = '';
+
+        break;
+    }
+    return this.api.get(environment.newSelected + idNews + type)
   }
+
 }

@@ -7,5 +7,6 @@ export const environment = {
     newSelected: 'https://conectadev2.tec.mx/es/jsonapi/node/news/',
     portada: 'https://conectadev2.tec.mx/es/jsonapi/node/portada',
     imgPortada: 'field_main_image',
-    catPortada: 'field_category'
+    catPortada: 'field_category',
+    host: 'https://conecta.tec.mx'
 };
