@@ -1,4 +1,4 @@
-<div class="new-body">
+<div *ngIf="newsAll.length > 0" class="new-body">
 
     <h2>{{subTitle}}</h2>
 
@@ -9,8 +9,7 @@
             <a
                 href="/noticias/categoria/{{newsAllCat[i]?.data[0]?.attributes?.drupal_internal__tid}}">{{newsAllCat[i]?.data[0]?.attributes?.name}}</a>
         </div>
-        <a
-            href="/es/noticias/ciudad-de-mexico/institucion/disenadora-del-ano-2022-crea-la-decima-cuarta-casa-de-sorteos">
+        <a href="{{news.data.attributes.path.alias}}">
             <div class="grid-image">
 
                 <img loading="lazy" src="{{getattd(i)}}" alt="" typeof="Image" />
@@ -18,14 +17,12 @@
             </div>
         </a>
         <div class="grid-info">
-            <a
-                href="/es/noticias/ciudad-de-mexico/institucion/disenadora-del-ano-2022-crea-la-decima-cuarta-casa-de-sorteos">
+            <a href="{{news.data.attributes.path.alias}}">
                 <div class="grid-date">
                     {{news.data.attributes.created | date:"dd MMMM yyyy"}}
                 </div>
             </a>
-            <a
-                href="/es/noticias/ciudad-de-mexico/institucion/disenadora-del-ano-2022-crea-la-decima-cuarta-casa-de-sorteos">
+            <a href="{{news.data.attributes.path.alias}}">
                 <div class="grid-title">
                     <span>{{news.data.attributes.title}}</span>
                 </div>
@@ -35,3 +32,4 @@
     </article>
 
 </div>
+<mat-spinner *ngIf="newsAll.length < 1"></mat-spinner>

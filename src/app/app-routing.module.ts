@@ -5,7 +5,7 @@ import { BodyComponent } from './body/body.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent, pathMatch: 'full' },
-  { path: 'noticia/:noticia', component: NoticiaComponent },
+  { path: 'noticia/:noticia:/id', component: NoticiaComponent },
   { path: 'noticias/:campus', component: BodyComponent },
 
 ];

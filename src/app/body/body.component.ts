@@ -44,7 +44,7 @@ export class BodyComponent implements OnInit {
     } else {
       this.viewNews = this.portada.filter((f: any) => this.normalizarTexto(f?.attributes?.title) == this.params)
     }
-    // console.log('portada news', this.viewNews)
+    console.log('portada news', this.viewNews)
 
 
   }

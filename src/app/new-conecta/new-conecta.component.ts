@@ -41,7 +41,7 @@ export class NewConectaComponent implements OnInit {
     return environment.host + this.newsAllImg[i]?.data?.attributes?.uri?.url;
   }
   getCat(i: number) {
-    return this.newsAllCat[i]?.data[0]?.attributes?.name;
+    return this.newsAllCat[i]?.ºdata[0]?.attributes?.name;
   }
 
 }
